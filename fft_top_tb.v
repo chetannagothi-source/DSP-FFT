@@ -52,6 +52,8 @@ module fft_top_tb;
 
     initial begin
         // System Reset Initialization State
+        $dumpfile("output.vcd");
+        $dumpvars(0,fft_top_tb);
         clk = 1'b0;
         rst_n = 1'b0;
         start = 1'b0;
