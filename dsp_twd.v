@@ -20,7 +20,6 @@ module dsp_twd (
     integer k;
     initial begin
         // Initialize the entire ROM to 1.0 (0x7FFF) for cosine and 0 for sine 
-        // to prevent 'X' propagation during testbench runs
         for (k = 0; k < 1024; k = k + 1) begin
             rom_cos[k] = 16'h7FFF; 
             rom_sin[k] = 16'h0000;
